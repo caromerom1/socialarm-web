@@ -1,0 +1,15 @@
+.loaderContainer {
+  display: grid;
+  place-items: center;
+  height: 100%;
+}
+
+.loader {
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  to {
+    transform: rotate(360deg);
+  }
+}
