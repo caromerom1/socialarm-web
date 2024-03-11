@@ -6,14 +6,21 @@ import { Button, TextField } from '@mui/material';
 import LoginLayout from '@/layouts/login';
 import styles from '@/styles/login.module.css';
 
+import FaqLayout from '@/layouts/faq';
+import FaqStyles from '@/styles/faq.module.css';
+
 import SociAlarmLogo from '@/assets/SociAlarmLogo.svg';
 import { Loader } from '@/components/Loader';
+
+import { Navbar } from '@/components/Navbar';
+import { ProfileModal } from '@/components/ProfileModal';
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const handleLogin = () => {
     setIsLoading(true);
+
     setTimeout(() => {
       setIsLoading(false);
     }, 2000);
