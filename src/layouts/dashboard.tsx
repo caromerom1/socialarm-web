@@ -16,11 +16,13 @@ export const DashboardLayout: React.FC<Props> = ({ children }) => {
 
   const handleModalOpen = () => {
     setIsModalOpen(true);
-  }
+  };
 
   return (
     <RootLayout>
-      <Navbar handlePersonaClick={handleModalOpen} />
+      <Navbar
+        handlePersonaClick={isModalOpen ? handleModalClose : handleModalOpen}
+      />
       {isModalOpen && <ProfileModal handleClose={handleModalClose} />}
       {children}
     </RootLayout>
