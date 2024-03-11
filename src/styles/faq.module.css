@@ -1,12 +1,13 @@
 .container {
   display: flex;
-  gap: 9px;
+  gap: 16px;
+  padding: 0 2rem;
 }
 
 .mainContainer {
   display: flex;
   height: 650px;
-  width: 1450px;
+  flex: 1;
   flex-direction: column;
   transform: translateY(4%);
   justify-content: center;
