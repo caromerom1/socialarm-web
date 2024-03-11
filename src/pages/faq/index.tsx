@@ -8,10 +8,6 @@ import styles from '@/styles/faq.module.css';
 import SearchIcon from '@/assets/SearchIcon.svg';
 import HelpIcon from '@/assets/HelpIcon.svg';
 
-interface FaqLayoutProps {
-  children: React.ReactNode;
-}
-
 const temasFrecuentes = [
   'Tema frecuente 1',
   'Tema frecuente 2',
@@ -31,14 +27,14 @@ const faqItems = [
   },
 ];
 
-const FaqLayout: React.FC<FaqLayoutProps> = ({ children }) => {
+const Faq = () => {
   return (
     <DashboardLayout>
       <div className={styles.container}>
         <section className={styles.mainContainer}>
           <h3 className={styles.containerTitle}>¿Cómo podemos ayudarte?</h3>
           {faqItems.map((item) => (
-            <div className={styles.cardItem}>
+            <div className={styles.cardItem} key={item.title}>
               <Image
                 src={HelpIcon}
                 alt="Help Icon"
@@ -60,7 +56,7 @@ const FaqLayout: React.FC<FaqLayoutProps> = ({ children }) => {
                 borderColor: '#006B3C',
               },
             }}
-            label="Buscar"
+            placeholder="Buscar"
             variant="outlined"
             InputProps={{
               endAdornment: (
@@ -87,4 +83,4 @@ const FaqLayout: React.FC<FaqLayoutProps> = ({ children }) => {
   );
 };
 
-export default FaqLayout;
+export default Faq;
