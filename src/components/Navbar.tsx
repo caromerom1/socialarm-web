@@ -20,6 +20,10 @@ export const Navbar: React.FC<Props> = ({ handlePersonaClick }) => {
     router.push('/');
   };
 
+  const handleFaqClick = () => {
+    router.push('/faq');
+  }
+
   return (
     <div className={styles.navbarContainer}>
       <div className={styles.iconButtonContainer}>
@@ -31,7 +35,7 @@ export const Navbar: React.FC<Props> = ({ handlePersonaClick }) => {
         </Button>
       </div>
       <div className={styles.iconButtonContainer}>
-        <Button className={styles.iconButton}>
+        <Button className={styles.iconButton} onClick={handleFaqClick}>
           <Image src={HelpIcon} alt="Help" className={styles.icon} />
         </Button>
         <Button className={styles.iconButton} onClick={handleLogout}>
