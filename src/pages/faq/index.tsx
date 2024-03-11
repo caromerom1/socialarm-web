@@ -33,8 +33,8 @@ const Faq = () => {
       <div className={styles.container}>
         <section className={styles.mainContainer}>
           <h3 className={styles.containerTitle}>¿Cómo podemos ayudarte?</h3>
-          {faqItems.map((item) => (
-            <div className={styles.cardItem} key={item.title}>
+          {faqItems.map((item, index) => (
+            <div className={styles.cardItem} key={`${item.title} - ${index}`}>
               <Image
                 src={HelpIcon}
                 alt="Help Icon"

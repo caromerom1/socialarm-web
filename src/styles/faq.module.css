@@ -85,7 +85,6 @@
 .secondContainerListItem {
   display: flex;
   flex-direction: row;
-  align-items: start;
   padding: 10px;
   font-size: 32px;
   font-weight: 100;
