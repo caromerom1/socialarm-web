@@ -26,6 +26,7 @@ export const ProfileModal: React.FC<Props> = ({ handleClose }) => (
       <TextField
         className={styles.textField}
         type="email"
+        label="Correo electrónico"
         id="correo"
         name="correo"
         placeholder="Correo"
@@ -33,6 +34,7 @@ export const ProfileModal: React.FC<Props> = ({ handleClose }) => (
       <TextField
         className={styles.textField}
         type="tel"
+        label="Teléfono"
         id="telefono"
         name="telefono"
         placeholder="Teléfono"
@@ -40,6 +42,7 @@ export const ProfileModal: React.FC<Props> = ({ handleClose }) => (
       <TextField
         className={styles.textField}
         type="password"
+        label="Clave"
         id="clave"
         name="clave"
         placeholder="Clave"
@@ -53,7 +56,6 @@ export const ProfileModal: React.FC<Props> = ({ handleClose }) => (
           textTransform: 'none',
           fontSize: '20px',
           fontWeight: '400',
-          mt: 3,
         }}
         onClick={handleClose}
       >
